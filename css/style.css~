@@ -1,0 +1,83 @@
+body{
+	background-image: url(../img/fondo.png);/*imagen de fondo de la pagina*/
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-size: 25px;
+	font-family: "franklin gothic", serif;
+}
+
+h2{
+	color: white;
+	font-family: "franklin gothic", serif;
+	font-size: 25px;
+}
+
+td{
+	padding: 10px;
+}
+
+nav{
+	width: 250px;
+	height: 200px;
+	margin: 5% left;
+	background: #b3b3b3;
+	border-radius: 10px;
+}
+
+nav li{
+	list-style: none;
+	position: relative; /* para que el submenu tome la posición correcta*/
+	border-radius: 10px;
+}
+
+nav li a{
+	color: #006680;
+	text-decoration: none;
+	padding: 5px;
+	display: block;
+}
+
+nav li a:hover{
+	color: #ff5900;
+}
+
+nav li.parent:hover{
+	border:1px #333333 solid;
+	margin:-1px;
+	background:#808080;
+}
+
+nav li li a{
+	width:250px;
+	display:block;
+}
+
+nav li li a:hover{
+	color: #ff5900;
+}
+
+nav li ul {
+	width: 0;
+    margin:0;
+    background:#808080;
+    border-radius: 10px;
+    position: absolute;
+    left: 100%;
+    top:-1px;
+    overflow:hidden; /* Para evitar Que se salgan los links */
+    z-index:1; 
+    opacity: 0; 
+    filter: alpha(opacity=0); /* Internet Explorer*/
+    -webkit-transition: opacity 0.2s ease-in 0.3s, width 0.4s ease-in 0.3s;/* Chrome, Safari*/
+    transition: opacity 0.2s ease-in  0.3s, width 0.4s ease-in 0.3s;/* Navegadores CSS3 */
+    -moz-transition: opacity 0.2s ease-in  0.3s, width 0.4s ease-in 0.3s; /* Firefox 4 */
+}
+
+nav li:hover ul {
+	width: 250px; /*La animación de 0 a 250px*/      
+    opacity: 1;
+    filter: alpha(opacity=100);/* Internet Explorer*/
+    -webkit-transition: opacity 0.1s linear 0s, width 0.3s ease-out 0s;/* Chrome, Safari*/
+    transition: opacity 0.1s linear 0s, width 0.3s ease-out 0s;/* Navegadores CSS3 */
+    -moz-transition: opacity 0.1s linear 0s, width 0.3s ease-out 0s; /* Firefox 4 */
+}
